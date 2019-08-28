@@ -1,6 +1,7 @@
-
 # Created by https://www.gitignore.io/api/vim,jenv,xcode,maven,emacs,gradle,windows,haskell,eclipse,intellij
 # Edit at https://www.gitignore.io/?templates=vim,jenv,xcode,maven,emacs,gradle,windows,haskell,eclipse,intellij
+
+*.zip
 
 ### Eclipse ###
 .metadata
@@ -346,4 +347,4 @@ gradle-app.setting
 
 # End of https://www.gitignore.io/api/vim,jenv,xcode,maven,emacs,gradle,windows,haskell,eclipse,intellij
 **/.idea
-*.log
+**/*.log

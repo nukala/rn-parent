@@ -3,3 +3,6 @@ Repository containing master pom for all of my projects. Contains master pom tha
 
 **Remember**
 Install this repo/pom first before using any other projects.
+
+*Warning*
+There are a few vulnerabilities. Use caution 

@@ -22,7 +22,7 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <!-- NOTE: Version 2.2-beta-3 fixes bug with <filtered> and <fileMode>. -->
-                    <version>2.2-beta-3</version>
+                    <version>${assemblyplugin.version}</version>
                 </plugin>
 
                 <plugin>
@@ -30,8 +30,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${compilerplugin.version}</version>
                     <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <!-- always show all warnings, disable per-project if desired -->
                         <compilerArgs>
@@ -216,7 +216,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
-                    <version>2.2</version>
+                    <version>${shadeplugin.version}</version>
                 </plugin>
 
             </plugins>
@@ -540,7 +540,7 @@
             <dependency>
                 <groupId>com.mchange</groupId>
                 <artifactId>c3p0</artifactId>
-                <version>0.9.5.4</version>
+                <version>${c3p0.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis</groupId>
@@ -557,33 +557,33 @@
     </dependencyManagement>
 
     <properties>
-        <createChecksum>true</createChecksum>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- thomassundberg.wordpress.com/2011/02/22/build-is-platform-dependent/ -->
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <preparationGoals>clean install</preparationGoals>
-        <goals>deploy</goals>
-
         <assemblyplugin.version>2.4</assemblyplugin.version>
         <checkstyleplugin.version>2.3</checkstyleplugin.version>
         <coberturaplugin.version>2.5.2</coberturaplugin.version>
         <compilerplugin.version>3.8.1</compilerplugin.version>
+        <createChecksum>true</createChecksum>
         <execplugin.version>1.1.1</execplugin.version>
         <failsafe.argLine>${surefire.argLine}</failsafe.argLine>
         <failsafe.forkMode>${surefire.forkMode}</failsafe.forkMode>
-        <!-- 2.12.2 is not compatible with maven 2.  It says unable to locate surefire-booter-->
+        <!-- failsafe 2.12.2 is not compatible with maven 2.  It says unable to locate surefire-booter-->
         <failsafeplugin.version>2.12</failsafeplugin.version>
         <gmavenplugin.version>1.4</gmavenplugin.version>
+        <goals>deploy</goals>
         <jarplugin.version>2.4</jarplugin.version>
         <javadocplugin.version>2.5</javadocplugin.version>
         <jdependplugin.version>2.0-beta-2</jdependplugin.version>
         <jxrplugin.version>2.1</jxrplugin.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <pmdplugin.version>2.4</pmdplugin.version>
+        <preparationGoals>clean install</preparationGoals>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- reporting: thomassundberg.wordpress.com/2011/02/22/build-is-platform-dependent/ -->
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <projectinfoplugin.version>2.1.2</projectinfoplugin.version>
         <releaseplugin.version>2.4</releaseplugin.version>
         <resourcesplugin.version>2.6</resourcesplugin.version>
+        <shadeplugin.version>2.2</shadeplugin.version>
         <sourceplugin.version>2.2.1</sourceplugin.version>
         <surefire.argLine>-Xmx960m -Djava.net.preferIPv4Stack=true</surefire.argLine>
         <surefire.forkMode>once</surefire.forkMode>
@@ -593,6 +593,7 @@
 
         <args4j.version>2.0.26</args4j.version>
         <assertj.version>3.13.1</assertj.version>
+        <c3p0.version>0.9.5.4</c3p0.version>
         <commons.cli.version>1.2</commons.cli.version>
         <commons.collections.version>4.0</commons.collections.version>
         <commons.io.version>2.4</commons.io.version>

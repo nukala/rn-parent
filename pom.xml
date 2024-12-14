@@ -635,7 +635,7 @@
         <mysqlj.version>5.1.48</mysqlj.version>
         <servletapi.version>2.5</servletapi.version>
         <slf4j.version>1.7.7</slf4j.version>
-        <spring.version>3.2.8.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <springmvc.version>${spring.version}</springmvc.version>
         <springws.version>2.1.4.RELEASE</springws.version>
         <testng.version>6.8.1</testng.version>

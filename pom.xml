@@ -25,10 +25,6 @@
                     <version>${assemblyplugin.version}</version>
                 </plugin>
 
-<!-- 25394885 next answer, no help here
-<plugin><groupId>org.projectlombok</groupId>       <artifactId>lombok-maven-plugin</artifactId>       <version>${lombok.version}</version>       <executions>         <execution>           <phase>generate-sources</phase>           <goals>             <goal>delombok</goal>           </goals>         </execution>       </executions>     </plugin>
--->
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -36,6 +32,14 @@
                     <configuration>
                         <source>${maven.compiler.source}</source>
                         <target>${maven.compiler.target}</target>
+                        <!-- SO=28325297, 25jun16> mvn did not work on macbook. missing getters-->
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                            </path>
+                        </annotationProcessorPaths>
+
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <!-- always show all warnings, disable per-project if desired -->
                         <compilerArgs>
@@ -43,9 +47,6 @@
                             <arg>-Xmaxwarns</arg>
                             <arg>5000</arg>
                         </compilerArgs>
-<!-- so=34394885
-<annotationProcessorPaths><path><groupId>org.projectlombok</groupId><artifactId>lombok</artifactId><version>${lombok.version}</version></path></annotationProcessorPaths>
--->
                     </configuration>
                 </plugin>
 
@@ -433,6 +434,7 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>jaxen</groupId>
@@ -591,8 +593,8 @@
         <javadocplugin.version>2.5</javadocplugin.version>
         <jdependplugin.version>2.0-beta-2</jdependplugin.version>
         <jxrplugin.version>2.1</jxrplugin.version>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
         <pmdplugin.version>2.4</pmdplugin.version>
         <preparationGoals>clean install</preparationGoals>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -629,7 +631,7 @@
         <jsonpath.version>0.8.1</jsonpath.version>
         <junit.version>4.11</junit.version>
         <log4j.version>1.2.17</log4j.version>
-        <lombok.version>1.18.32</lombok.version>
+        <lombok.version>1.18.38</lombok.version>
         <mybatis.spring.version>1.2.1</mybatis.spring.version>
         <mybatis.version>3.2.8</mybatis.version>
         <mysqlj.version>5.1.48</mysqlj.version>

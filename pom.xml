@@ -593,8 +593,8 @@
         <javadocplugin.version>2.5</javadocplugin.version>
         <jdependplugin.version>2.0-beta-2</jdependplugin.version>
         <jxrplugin.version>2.1</jxrplugin.version>
-        <maven.compiler.source>24</maven.compiler.source>
-        <maven.compiler.target>24</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <pmdplugin.version>2.4</pmdplugin.version>
         <preparationGoals>clean install</preparationGoals>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -616,7 +616,7 @@
         <c3p0.version>0.9.5.4</c3p0.version>
         <commons.cli.version>1.2</commons.cli.version>
         <commons.collections.version>4.0</commons.collections.version>
-        <commons.io.version>2.4</commons.io.version>
+        <commons.io.version>2.7</commons.io.version>
         <commons.lang3.version>3.9</commons.lang3.version>
         <commons.text.version>1.8</commons.text.version>
         <ehcache.version>2.4.3</ehcache.version>
@@ -633,8 +633,8 @@
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.18.38</lombok.version>
         <mybatis.spring.version>1.2.1</mybatis.spring.version>
-        <mybatis.version>3.2.8</mybatis.version>
-        <mysqlj.version>5.1.48</mysqlj.version>
+        <mybatis.version>3.5.6</mybatis.version>
+        <mysqlj.version>8.0.28</mysqlj.version>
         <servletapi.version>2.5</servletapi.version>
         <slf4j.version>1.7.7</slf4j.version>
         <spring.version>3.2.8.RELEASE</spring.version>
